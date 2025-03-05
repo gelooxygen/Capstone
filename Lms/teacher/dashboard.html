@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Schola Angelus Agape</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/style/teacher.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-success fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/images/logo.jpg" alt="Schola Angelus Agape" width="40" height="40" class="d-inline-block align-text-top me-2">
+                Teacher Portal
+            </a>
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <a class="text-white text-decoration-none dropdown-toggle" href="#" role="button" id="notificationsDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge bg-warning">5</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationsDropdown">
+                        <li><a class="dropdown-item" href="#">New Assignment Submissions</a></li>
+                        <li><a class="dropdown-item" href="#">Schedule Update</a></li>
+                        <li><a class="dropdown-item" href="#">Parent Meeting Request</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#teacherSidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="teacherSidebar">
+        <div class="offcanvas-header">
+            <div class="user-profile">
+                <img src="/images/teacher-avatar.jpg" alt="Teacher Avatar" class="rounded-circle">
+                <h5 class="offcanvas-title">Ms. Sarah Johnson</h5>
+                <p class="text-muted">Mathematics Department</p>
+            </div>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fas fa-home me-2"></i>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-chalkboard me-2"></i>My Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-book me-2"></i>Course Content</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-tasks me-2"></i>Assignments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-chart-bar me-2"></i>Grades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-calendar-alt me-2"></i>Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-comments me-2"></i>Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-cog me-2"></i>Settings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5 pt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Welcome, Ms. Johnson!</h2>
+                <p class="text-muted">Here's your teaching overview</p>
+
+                <!-- Quick Stats -->
+                <div class="row mt-4">
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Active Classes</h6>
+                                <h2 class="card-title">5</h2>
+                                <p class="card-text">Current Semester</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Total Students</h6>
+                                <h2 class="card-title">127</h2>
+                                <p class="card-text">Across All Classes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Pending Grades</h6>
+                                <h2 class="card-title">23</h2>
+                                <p class="card-text">Need Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Due Today</h6>
+                                <h2 class="card-title">3</h2>
+                                <p class="card-text">Assignments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Schedule & Tasks -->
+                <div class="row mt-4">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0">Today's Schedule</h5>
+                                <button class="btn btn-sm btn-outline-success">View Full Schedule</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="schedule-timeline">
+                                    <div class="schedule-item">
+                                        <div class="time">8:00 AM</div>
+                                        <div class="class-info">
+                                            <h6>Mathematics 101</h6>
+                                            <p>Grade 10-A | Room 301</p>
+                                        </div>
+                                        <span class="badge bg-success">In Progress</span>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="time">10:30 AM</div>
+                                        <div class="class-info">
+                                            <h6>Advanced Algebra</h6>
+                                            <p>Grade 11-B | Room 305</p>
+                                        </div>
+                                        <span class="badge bg-secondary">Upcoming</span>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="time">1:15 PM</div>
+                                        <div class="class-info">
+                                            <h6>Geometry</h6>
+                                            <p>Grade 9-C | Room 302</p>
+                                        </div>
+                                        <span class="badge bg-secondary">Upcoming</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Quick Tasks</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-list">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="task1">
+                                        <label class="form-check-label" for="task1">
+                                            Grade Math 101 Quiz
+                                            <small class="d-block text-muted">23 submissions</small>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="task2">
+                                        <label class="form-check-label" for="task2">
+                                            Prepare Lesson Plan
+                                            <small class="d-block text-muted">For next week</small>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="task3">
+                                        <label class="form-check-label" for="task3">
+                                            Parent-Teacher Meeting
+                                            <small class="d-block text-muted">3:30 PM</small>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-success w-100 mt-3">
+                                    <i class="fas fa-plus me-2"></i>Add New Task
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-feed">
+                                    <div class="activity-item">
+                                        <i class="fas fa-upload text-primary"></i>
+                                        <div class="activity-content">
+                                            <h6>Posted New Assignment</h6>
+                                            <p>Mathematics 101 - Chapter 5 Exercise</p>
+                                            <small class="text-muted">2 hours ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                        <div class="activity-content">
+                                            <h6>Graded Assignments</h6>
+                                            <p>Advanced Algebra - Mid-term Papers</p>
+                                            <small class="text-muted">5 hours ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <i class="fas fa-comment text-info"></i>
+                                        <div class="activity-content">
+                                            <h6>New Comment</h6>
+                                            <p>Replied to student query on Geometry assignment</p>
+                                            <small class="text-muted">Yesterday</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
