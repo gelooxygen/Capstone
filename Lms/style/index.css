@@ -1,0 +1,226 @@
+.hero-section {
+    background: url('../images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-orange {
+    background-color: #FF9D23;
+    color: #fff;
+    border-color: #FF9D23;
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #C14600;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.btn-fancy {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bg-orange {
+    background-color: #FF9D23;
+}
+.text-orange {
+    color: #FF9D23;
+}
+
+.border-orange {
+    border-color: #FF9D23;
+}
+
+.btn-custom {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-orange {
+    background-color: #FF9D23;
+    color: #fff;
+    border-color: #FF9D23;
+}
+
+.btn-orange-outline {
+    border-color: #FF9D23;
+    color: #FF9D23;
+}
+
+.btn-light-green {
+    background-color: #8BC34A;
+    color: #fff;
+    border-color: #8BC34A;
+}
+
+.btn-dark-red {
+    background-color: #8B0A1A;
+    color: #fff;
+    border-color: #8B0A1A;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* FullCalendar Custom Styling */
+.fc-event {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.fc-event:hover {
+    opacity: 1;
+}
+.fc-daygrid-event-dot {
+    border-color: white !important;
+}
+
+.btn-custom {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-orange {
+    background-color: #FF9D23;
+    color: #fff;
+    border-color: #FF9D23;
+}
+
+.btn-orange-outline {
+    border-color: #FF9D23;
+    color: #FF9D23;
+}
+
+.btn-light-green {
+    background-color: #8BC34A;
+    color: #fff;
+    border-color: #8BC34A;
+}
+
+.btn-dark-red {
+    background-color: #8B0A1A;
+    color: #fff;
+    border-color: #8B0A1A;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        
+    }
+}
+
+/* Mission and Vision Section Styles */
+.mission-vision-section {
+    background-color: #FEF9E1;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card,
+.vision-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.mission-icon,
+.vision-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mission-icon i,
+.vision-icon i {
+    color: #FF9D23;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.mission-card:hover .mission-icon i,
+.vision-card:hover .vision-icon i {
+    opacity: 1;
+}
